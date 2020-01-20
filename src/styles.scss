@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #263238;
+}
+
+h1, h2, h3, h4, p {
+  color: white;
+}
+
+/* Buttons styles and effects */
+button {
+  background-color: #ffca28 !important;
+  color: black;
+  //box-shadow: 0 5px #4f5b62;
+}
+
+button:hover {
+  background-color: #fffd61 !important;
+}
+
+button:active {
+  background-color: #fffd61;
+  transform: translateY(4px);
+}
+
+/* Links styles and effects */
+a {
+  color: #ffca28;
+}
+
+a:visited {
+  color: #ffca28;
+}
+
+a:hover {
+  color: #fffd61;
+  text-decoration: none;
+}
