@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ISSTrackerCarouselComponent } from './isstracker-carousel/isstracker-carousel.component';
+import { HellblazeInfosComponent } from './hellblaze-infos/hellblaze-infos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ISSTrackerCarouselComponent
+    ISSTrackerCarouselComponent,
+    HellblazeInfosComponent
   ],
   imports: [
     BrowserModule,

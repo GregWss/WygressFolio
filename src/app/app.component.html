@@ -1,36 +1,46 @@
 <div class="col-md-10 offset-md-1">
   <div class="toolbar" role="banner">
-    <h1>Wygress frontpage (WIP)</h1>
+    <!-- Logo's font : https://www.dafont.com/minecrafter.font -->
+    <img class="titleIcon" src="assets/img/Logos/wygressFolioLogoRed.png">
+    <ul id="headerList">
+      <li><a href="#aboutAnchor" class=".headerLink">À propos</a></li>
+      <li><a href="#projectsAnchor" class=".headerLink">Projets</a></li>
+      <li><a href="#contactAnchor" class=".headerLink">Contact</a></li>
+    </ul>
   </div>
 
-  <div>
-    <h3>About me</h3>
+  <div id="aboutAnchor">
+    <h3>À propos</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus nisl a cursus ornare. Aenean in finibus diam, in placerat mauris. Donec posuere non odio malesuada iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam non turpis id leo malesuada volutpat faucibus varius purus. Aenean non velit nec justo posuere aliquet non et ipsum. Donec massa metus, lobortis sit amet sodales in, fringilla a nisl. Morbi hendrerit tempus odio id luctus. Pellentesque ac risus ut purus vestibulum facilisis ut faucibus dolor. Nullam consectetur sagittis cursus. Quisque vitae faucibus nibh, finibus sollicitudin nibh. Sed commodo luctus turpis ultricies porttitor. Praesent ultrices odio sed orci lobortis, ut rhoncus enim gravida.</p>
   </div>
 
-  <div>
-    <h3>Projects</h3>
+  <div id="projectsAnchor">
+    <h3>Projets</h3>
 
-    <h4>Current project</h4>
-    <img src="assets/img/2DFight/project2DFight.PNG" alt="Image illustrating this project">
-    <p>A game in local multiplayer where 2 players have to fight against each other to survive</p>
+    <h4>Projet en cours</h4>
+    <p>Un jeu en multijoueur local dans lequel deux joueurs s'affrontent pour survivre.</p>
+    <img class="centeredImg" src="assets/img/2DFight/demo1.gif" alt="First gif illustrating this project" width="50%" height="50%">
+    <img class="centeredImg" src="assets/img/2DFight/demo2.gif" alt="Second gif illustrating this project" width="50%" height="50%">
+    <ul>
+      <li><span style="text-decoration: underline">Style :</span> 2D Plateforme / Combat</li>
+      <li><span style="text-decoration: underline">Techno :</span> Unity</li>
+      <li><span style="text-decoration: underline">Nombre de joueurs :</span> 2 (4 dans le futur)</li>
+    </ul>
 
-    <h4>Hellblaze</h4>
-    <p>A video game programmed with a team of 8 people in 2019 during studies in game programming at UQAC</p>
-
+    <app-hellblaze-infos></app-hellblaze-infos>
     <app-isstracker-carousel></app-isstracker-carousel>
 
     <h4>Game Jam</h4>
     <p>Game done at Montréal Game Jam</p>
   </div>
 
-  <div>
-    <h3>Contact & others</h3>
+  <div id="contactAnchor">
+    <h3>Contact & autre</h3>
     <p>Mail, Github, Steam Account, OP.GG ?</p>
   </div>
 
   <div>
-    <h3>Elements test section</h3>
+    <h3>Section test</h3>
 
     <div>
       <button class="btn">Bouton test</button>

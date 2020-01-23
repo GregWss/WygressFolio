@@ -1,9 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+/* Header */
+.titleIcon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+  margin-top: 5px;
+}
+
+#headerList {
+  text-align: center;
+  font-size: 25px;
+  margin-left: -45px;
+  margin-top: 5px;
+}
+
+#headerList li {
+  display: inline;
+  padding: 25px;
+}
+
+/* Project styles */
+
+
+/* REUSABLE AND GLOBAL STYLES */
+
 body {
   background-color: #263238;
 }
 
-h1, h2, h3, h4, p {
+/* Every text set to white */
+h1, h2, h3, h4, p, li {
   color: white;
 }
 
@@ -35,4 +62,11 @@ a:visited {
 a:hover {
   color: #fffd61;
   text-decoration: none;
+}
+
+/* Images styles and effects */
+.centeredImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
