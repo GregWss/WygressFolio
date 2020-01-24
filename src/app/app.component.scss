@@ -1,11 +1,1 @@
-/* Custom switch changes */
-.custom-control-label:before{
-    background-color: white;
-}
-.custom-control-input:checked~.custom-control-label::before{
-    background-color: #ffca28;
-}
 
-.custom-control-input:active~.custom-control-label::before{
-    background-color: #fffd61;
-}

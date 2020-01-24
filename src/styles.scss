@@ -1,3 +1,8 @@
+/* VARIABLES */
+$background-color: #263238;
+$accent-color: #ffca28;
+$accent-color-light: #fffd61;
+
 /* Header */
 .titleIcon {
   display: block;
@@ -22,11 +27,15 @@
 
 /* Project styles */
 
+/* Contact style */
+.contactList {
+  list-style: none;
+}
 
 /* REUSABLE AND GLOBAL STYLES */
 
 body {
-  background-color: #263238;
+  background-color: $background-color;
 }
 
 /* Every text set to white */
@@ -36,31 +45,43 @@ h1, h2, h3, h4, p, li {
 
 /* Buttons styles and effects */
 button {
-  background-color: #ffca28 !important;
+  background-color: $accent-color !important;
   color: black;
   //box-shadow: 0 5px #4f5b62;
 }
 
 button:hover {
-  background-color: #fffd61 !important;
+  background-color: $accent-color-light !important;
 }
 
 button:active {
-  background-color: #fffd61;
+  background-color: $accent-color-light;
   transform: translateY(4px);
+}
+
+/* Custom switch changes */
+.custom-control-label:before{
+    background-color: white;
+}
+.custom-control-input:checked~.custom-control-label::before{
+    background-color: $accent-color;
+}
+
+.custom-control-input:active~.custom-control-label::before{
+    background-color: $accent-color-light !important;
 }
 
 /* Links styles and effects */
 a {
-  color: #ffca28;
+  color: $accent-color;
 }
 
 a:visited {
-  color: #ffca28;
+  color: $accent-color;
 }
 
 a:hover {
-  color: #fffd61;
+  color: $accent-color-light;
   text-decoration: none;
 }
 
