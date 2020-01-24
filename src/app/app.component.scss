@@ -1,1 +1,21 @@
+/* Title & header style */
+.titleIcon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+  margin-top: 5px;
+}
 
+#headerList {
+  text-align: center;
+  font-size: 25px;
+  margin-left: -45px;
+  margin-top: 5px;
+}
+
+#headerList li {
+  display: inline;
+  padding: 25px;
+}

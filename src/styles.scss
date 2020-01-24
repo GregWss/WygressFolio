@@ -3,35 +3,6 @@ $background-color: #263238;
 $accent-color: #ffca28;
 $accent-color-light: #fffd61;
 
-/* Header */
-.titleIcon {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 50%;
-  margin-top: 5px;
-}
-
-#headerList {
-  text-align: center;
-  font-size: 25px;
-  margin-left: -45px;
-  margin-top: 5px;
-}
-
-#headerList li {
-  display: inline;
-  padding: 25px;
-}
-
-/* Project styles */
-
-/* Contact style */
-.contactList {
-  list-style: none;
-}
-
 /* REUSABLE AND GLOBAL STYLES */
 
 body {
@@ -44,17 +15,17 @@ h1, h2, h3, h4, p, li {
 }
 
 /* Buttons styles and effects */
-button {
+.btn {
   background-color: $accent-color !important;
   color: black;
   //box-shadow: 0 5px #4f5b62;
 }
 
-button:hover {
+.btn:hover {
   background-color: $accent-color-light !important;
 }
 
-button:active {
+.btn:active {
   background-color: $accent-color-light;
   transform: translateY(4px);
 }
@@ -90,4 +61,10 @@ a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* STYLES FOR MAIN APP ELEMENTS */
+/* Contact style */
+.contactList {
+  list-style: none;
 }

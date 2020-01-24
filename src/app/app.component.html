@@ -1,12 +1,16 @@
 <div class="col-md-10 offset-md-1">
   <div class="toolbar" role="banner">
     <!-- Logo's font : https://www.dafont.com/minecrafter.font -->
-    <img class="titleIcon" src="assets/img/Logos/wygressFolioLogoRed.png">
-    <ul id="headerList">
-      <li><a href="#aboutAnchor" class=".headerLink">À propos</a></li>
-      <li><a href="#projectsAnchor" class=".headerLink">Projets</a></li>
-      <li><a href="#contactAnchor" class=".headerLink">Contact</a></li>
-    </ul>
+    <div data-aos="fade-down">
+      <img class="titleIcon" src="assets/img/Logos/wygressFolioLogoRed.png">
+    </div>
+    <div data-aos="fade-right">
+      <ul id="headerList">
+        <li><a href="#aboutAnchor" class=".headerLink">À propos</a></li>
+        <li><a href="#projectsAnchor" class=".headerLink">Projets</a></li>
+        <li><a href="#contactAnchor" class=".headerLink">Contact</a></li>
+      </ul>
+    </div>
   </div>
 
   <div id="aboutAnchor">
@@ -15,12 +19,16 @@
   </div>
 
   <div id="projectsAnchor">
-    <h3>Projets</h3>
+    <div data-aos="fade-right">
+      <h3>Projets</h3>
+      <h4>Projet en cours</h4>
+      <p>Un jeu en multijoueur local dans lequel deux joueurs s'affrontent pour survivre.</p>
+    </div>
 
-    <h4>Projet en cours</h4>
-    <p>Un jeu en multijoueur local dans lequel deux joueurs s'affrontent pour survivre.</p>
-    <img class="centeredImg" src="assets/img/2DFight/demo1.gif" alt="First gif illustrating this project" width="50%" height="50%">
-    <img class="centeredImg" src="assets/img/2DFight/demo2.gif" alt="Second gif illustrating this project" width="50%" height="50%">
+    <div data-aos="fade-up-right">
+      <img src="assets/img/2DFight/demo1.gif" alt="First gif illustrating this project" width="75%">
+    </div>
+
     <ul>
       <li><span style="text-decoration: underline">Style :</span> 2D Plateforme / Combat</li>
       <li><span style="text-decoration: underline">Techno :</span> Unity</li>
@@ -28,7 +36,10 @@
     </ul>
 
     <app-hellblaze-infos></app-hellblaze-infos>
-    <app-isstracker-carousel></app-isstracker-carousel>
+
+    <div data-aos="fade-up-left">
+      <app-isstracker-carousel></app-isstracker-carousel>
+    </div>
 
     <h4>Game Jam</h4>
     <p>Game done at Montréal Game Jam</p>
