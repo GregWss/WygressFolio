@@ -1,52 +1,59 @@
-<div class="col-md-10 offset-md-1">
-  <div class="toolbar" role="banner">
-    <!-- Logo's font : https://www.dafont.com/minecrafter.font -->
-    <div data-aos="fade-down">
-      <img class="titleIcon" src="assets/img/Logos/wygressFolioLogoRed.png">
-    </div>
-    <div data-aos="fade-right">
-      <ul id="headerList">
-        <li><a href="#aboutAnchor" class=".headerLink">À propos</a></li>
-        <li><a href="#projectsAnchor" class=".headerLink">Projets</a></li>
-        <li><a href="#contactAnchor" class=".headerLink">Contact</a></li>
-      </ul>
-    </div>
+<div class="toolbar" role="banner">
+  <!-- Logo's font : https://www.dafont.com/minecrafter.font -->
+  <div data-aos="fade-down">
+    <img class="titleIcon" src="assets/img/Logos/wygressFolioLogoRed.png">
   </div>
+  <!-- <div data-aos="fade-right">
+    <ul id="headerList">
+      <li><a href="#projectsAnchor" class=".headerLink">Projets</a></li>
+      <li><a href="#aboutAnchor" class=".headerLink">À propos</a></li>
+    </ul>
+  </div> -->
+</div>
 
-  <div id="aboutAnchor">
-    <h3>À propos</h3>
+<div class="dotstyle dotstyle-smalldotstroke">
+	<ul>
+		<li (click)="isCurrent(1)" [ngClass]="{'current': selectedDot === 1}"><a href="#projectsAnchor">Projets</a></li>
+		<li (click)="isCurrent(2)" [ngClass]="{'current': selectedDot === 2}"><a href="#aboutAnchor">About</a></li>
+	</ul>
+</div>
+
+<div class="content">
+  <div class="section" data-aos="fade-up-right">
+    <h3>Caroussel d'images en présentation</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus nisl a cursus ornare. Aenean in finibus diam, in placerat mauris. Donec posuere non odio malesuada iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam non turpis id leo malesuada volutpat faucibus varius purus. Aenean non velit nec justo posuere aliquet non et ipsum. Donec massa metus, lobortis sit amet sodales in, fringilla a nisl. Morbi hendrerit tempus odio id luctus. Pellentesque ac risus ut purus vestibulum facilisis ut faucibus dolor. Nullam consectetur sagittis cursus. Quisque vitae faucibus nibh, finibus sollicitudin nibh. Sed commodo luctus turpis ultricies porttitor. Praesent ultrices odio sed orci lobortis, ut rhoncus enim gravida.</p>
   </div>
 
-  <div id="projectsAnchor">
-    <div data-aos="fade-right">
-      <h3>Projets</h3>
+  <div id="projectsAnchor" class="section">
+    <h3>Projets</h3>
+
+    <div id="projectSurvival" class="subsection no-margin-top" data-aos="fade-up-right">
       <h4>Projet en cours</h4>
       <p>Un jeu en multijoueur local dans lequel deux joueurs s'affrontent pour survivre.</p>
+
+      <ul>
+        <li><span style="text-decoration: underline">Style :</span> 2D Plateforme / Combat</li>
+        <li><span style="text-decoration: underline">Techno :</span> Unity</li>
+        <li><span style="text-decoration: underline">Nombre de joueurs :</span> 2 (4 dans le futur)</li>
+      </ul>
     </div>
 
-    <div data-aos="fade-up-right">
-      <img src="assets/img/2DFight/demo1.gif" alt="First gif illustrating this project" width="75%">
+    <div class="subsection" data-aos="fade-up-left">
+      <app-hellblaze-infos></app-hellblaze-infos>
     </div>
 
-    <ul>
-      <li><span style="text-decoration: underline">Style :</span> 2D Plateforme / Combat</li>
-      <li><span style="text-decoration: underline">Techno :</span> Unity</li>
-      <li><span style="text-decoration: underline">Nombre de joueurs :</span> 2 (4 dans le futur)</li>
-    </ul>
-
-    <app-hellblaze-infos></app-hellblaze-infos>
-
-    <div data-aos="fade-up-left">
+    <div class="subsection" data-aos="fade-up-right">
       <app-isstracker-carousel></app-isstracker-carousel>
     </div>
 
-    <h4>Game Jam</h4>
-    <p>Game done at Montréal Game Jam</p>
+    <div class="subsection" data-aos="fade-up-left">
+      <h4>Game Jam</h4>
+      <p>Game done at Montréal Game Jam</p>
+    </div>
   </div>
 
-  <div id="contactAnchor">
-    <h3>Contact & autre</h3>
+  <div id="aboutAnchor" class="section" data-aos="fade-up-right">
+    <h3>À propos & contact</h3>
     <ul class="contactList">
       <li><span style="text-decoration: underline">Mail :</span> weiss.gregory48@gmail.com</li>
       <li><span style="text-decoration: underline">Github :</span> https://github.com/GregWss</li>

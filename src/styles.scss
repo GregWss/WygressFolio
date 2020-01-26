@@ -14,6 +14,44 @@ h1, h2, h3, h4, p, li {
   color: white;
 }
 
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+/* Content sections and subsections styles */
+.content {
+  margin-left: 25px;
+  margin-right: 100px;
+}
+
+.no-margin-top {
+  margin-top: 15px !important;
+}
+
+.section {
+  margin-top: 100px;
+}
+
+.section p {
+  margin-top: 25px;
+  padding-left: 50px;
+  text-indent: 25px;
+}
+
+.subsection {
+  margin-top: 50px;
+}
+
+.subsection p {
+  margin-top: 25px;
+  padding-left: 50px;
+  text-indent: 25px;
+}
+
 /* Buttons styles and effects */
 .btn {
   background-color: $accent-color !important;
@@ -57,14 +95,8 @@ a:hover {
 }
 
 /* Images styles and effects */
-.centeredImg {
+/*.fitImage {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* STYLES FOR MAIN APP ELEMENTS */
-/* Contact style */
-.contactList {
-  list-style: none;
-}
+}*/

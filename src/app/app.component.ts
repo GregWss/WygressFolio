@@ -8,6 +8,7 @@ import * as AOS from 'aos';
 })
 export class AppComponent implements OnInit {
   title = 'WygressFolio';
+  selectedDot = 1; // always start at first dot (for now)
 
   constructor() { }
 
@@ -17,6 +18,15 @@ export class AppComponent implements OnInit {
       delay: 200,
       once: true
     });
+
+    // run on init to know where we are
+    this.isCurrent(this.selectedDot);
   }
 
+  //TODO: check and update to inform where we are on the page
+  isCurrent(newValue) {
+    if (this.selectedDot !== newValue) {
+      this.selectedDot = newValue;
+    }
+  }
 }
