@@ -2,8 +2,29 @@
 <p>An Android App which help users to track in real time the International Space Station position</p>
 
 
-<img class="mySlides" alt="ISS Tracker's homepage" src="assets/img/ISSTracker/accueil.jpg" height="10%" width="10%"/>
-<img class="mySlides" alt="ISS Tracker's following map" src="assets/img/ISSTracker/map.jpg" height="10%" width="10%"/>
-<img class="mySlides" alt="ISS Tracker's astronaut informations" src="assets/img/ISSTracker/astros.jpg" height="10%" width="10%"/>
+<ngb-carousel
+[showNavigationArrows]="true"
+[showNavigationIndicators]="true"
+interval="5000"
+[keyboard]="false"
+[pauseOnHover]="true"
+[wrap]="true"
+[activeId]="'secondSlide'">
+  <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img class="mySlides" alt="ISS Tracker's homepage" src="assets/img/ISSTracker/accueil.jpg" width="10%"/>
+      </div>
+  </ng-template>
+  <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img class="mySlides" alt="ISS Tracker's following map" src="assets/img/ISSTracker/map.jpg" width="10%"/>
+      </div>
+  </ng-template>
+  <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img class="mySlides" alt="ISS Tracker's astronaut informations" src="assets/img/ISSTracker/astros.jpg" width="10%"/>
+      </div>
+  </ng-template>
+</ngb-carousel>
 
 <a href="https://github.com/GregWss/ISSTracker">Dépôt Github</a>

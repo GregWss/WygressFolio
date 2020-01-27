@@ -3,12 +3,12 @@
   <div data-aos="fade-down">
     <img class="titleIcon" src="assets/img/Logos/wygressFolioLogoRed.png">
   </div>
-  <!-- <div data-aos="fade-right">
+  <div data-aos="fade-right">
     <ul id="headerList">
       <li><a href="#projectsAnchor" class=".headerLink">Projets</a></li>
       <li><a href="#aboutAnchor" class=".headerLink">À propos</a></li>
     </ul>
-  </div> -->
+  </div>
 </div>
 
 <div class="dotstyle dotstyle-smalldotstroke">
@@ -20,8 +20,42 @@
 
 <div class="content">
   <div class="section" data-aos="fade-up-right">
-    <h3>Caroussel d'images en présentation</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus nisl a cursus ornare. Aenean in finibus diam, in placerat mauris. Donec posuere non odio malesuada iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam non turpis id leo malesuada volutpat faucibus varius purus. Aenean non velit nec justo posuere aliquet non et ipsum. Donec massa metus, lobortis sit amet sodales in, fringilla a nisl. Morbi hendrerit tempus odio id luctus. Pellentesque ac risus ut purus vestibulum facilisis ut faucibus dolor. Nullam consectetur sagittis cursus. Quisque vitae faucibus nibh, finibus sollicitudin nibh. Sed commodo luctus turpis ultricies porttitor. Praesent ultrices odio sed orci lobortis, ut rhoncus enim gravida.</p>
+    <ngb-carousel
+    [showNavigationArrows]="true"
+    [showNavigationIndicators]="true"
+    interval="5000"
+    [keyboard]="false"
+    [pauseOnHover]="true"
+    [wrap]="true"
+    [activeId]="'secondSlide'">
+      <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+              <img src="assets/img/topCarousel/demo1.gif" alt="">
+          </div>
+          <div class="carousel-caption">
+              <h3>Current project</h3>
+              <p>A local multiplayer fight game</p>
+          </div>
+      </ng-template>
+      <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+              <img src="assets/img/topCarousel/HellblazeMainTitle.png" alt="">
+          </div>
+          <div class="carousel-caption">
+              <h3>Hellblaze project</h3>
+              <p>A third person beat'em'all</p>
+          </div>
+      </ng-template>
+      <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+              <img src="assets/img/topCarousel/ray-tracing_spheres.bmp" alt="">
+          </div>
+          <div class="carousel-caption">
+              <h3>First ray tracing render</h3>
+              <p>My first render using ray tracing in C++</p>
+          </div>
+      </ng-template>
+    </ngb-carousel>
   </div>
 
   <div id="projectsAnchor" class="section">
