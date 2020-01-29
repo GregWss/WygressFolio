@@ -8,7 +8,7 @@ import * as AOS from 'aos';
 })
 export class AppComponent implements OnInit {
   title = 'WygressFolio';
-  selectedDot = 1; // always start at first dot (for now)
+  selectedDot = 0; // always start at first dot (for now)
 
   constructor() { }
 
@@ -23,10 +23,15 @@ export class AppComponent implements OnInit {
     this.isCurrent(this.selectedDot);
   }
 
-  //TODO: check and update to inform where we are on the page
+  // TODO: check and update to inform where we are on the page
   isCurrent(newValue) {
     if (this.selectedDot !== newValue) {
       this.selectedDot = newValue;
     }
+  }
+
+  // Updating the dot navigation when reaching a div
+  action(event : any) {
+    console.log('It works here');
   }
 }

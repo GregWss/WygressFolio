@@ -1,0 +1,160 @@
+<!-- Header: icon & navLinks -->
+<div class="toolbar" role="banner">
+  <div data-aos="fade-down">
+    <img class="titleIcon" src="assets/img/Logos/wygressFolioLogoRed.png">
+  </div>
+  <div data-aos="fade-right">
+    <ul id="headerList">
+      <li><a href="#projectsAnchor" class=".headerLink">Projets</a></li>
+      <li><a href="#aboutAnchor" class=".headerLink">À propos</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Liste de navigation en points -->
+<div class="dotstyle dotstyle-smalldotstroke">
+	<ul>
+		<li (click)="isCurrent(1)" [ngClass]="{'current': selectedDot === 1}"><a href="#projectsAnchor">Projets</a></li>
+		<li (click)="isCurrent(2)" [ngClass]="{'current': selectedDot === 2}"><a href="#aboutAnchor">About</a></li>
+	</ul>
+</div>
+
+<!-- Content -->
+<div class="content">
+  <div class="section" data-aos="fade-up-right">
+    <ngb-carousel
+    [showNavigationArrows]="true"
+    [showNavigationIndicators]="true"
+    interval="5000"
+    [keyboard]="false"
+    [pauseOnHover]="true"
+    [wrap]="true"
+    [activeId]="'secondSlide'">
+      <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+              <img src="assets/img/topCarousel/demo1.gif" alt="">
+          </div>
+          <div class="carousel-caption">
+              <h3>Current project</h3>
+              <p>A local multiplayer fight game</p>
+          </div>
+      </ng-template>
+      <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+              <img src="assets/img/topCarousel/HellblazeMainTitle.png" alt="">
+          </div>
+          <div class="carousel-caption">
+              <h3>Hellblaze project</h3>
+              <p>A third person beat'em'all</p>
+          </div>
+      </ng-template>
+      <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+              <img src="assets/img/topCarousel/ray-tracing_spheres.bmp" alt="">
+          </div>
+          <div class="carousel-caption">
+              <h3>First ray tracing render</h3>
+              <p>My first render using ray tracing in C++</p>
+          </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(1)" id="projectsAnchor" class="section">
+    <h3>Projets</h3>
+
+    <div id="projectSurvival" class="subsection no-margin-top" data-aos="fade-up-right">
+      <h4>Projet en cours</h4>
+      <p>Un jeu en multijoueur local dans lequel deux joueurs s'affrontent pour survivre.</p>
+
+      <ul>
+        <li><span style="text-decoration: underline">Style :</span> 2D Plateforme / Combat</li>
+        <li><span style="text-decoration: underline">Techno :</span> Unity</li>
+        <li><span style="text-decoration: underline">Nombre de joueurs :</span> 2 (4 dans le futur)</li>
+      </ul>
+    </div>
+
+    <div class="subsection" data-aos="fade-up-left">
+      <h4>Hellblaze</h4>
+      <p>Un jeu conçu par une équipe de 8 personnes en 2018 au cours d'un programme d'étude à l'UQAC.</p>
+      <p>Dans cette alpha, le principe est de réaliser des quêtes et de progresser en tuant monstres et boss.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/DEbtSmcdpt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <ul>
+        <li><span style="text-decoration: underline">Style :</span> 3D RPG / Beat'em'all</li>
+        <li><span style="text-decoration: underline">Techno :</span> Unity</li>
+        <li><span style="text-decoration: underline">Nombre de joueurs :</span> Solo</li>
+      </ul>
+
+      <input type="button" value="Télécharger" class="btn" onclick="window.location='assets/downloads/HELLBLAZE.zip';">
+      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/9xdEKtRHqu4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    </div>
+
+    <div class="subsection" data-aos="fade-up-right">
+      <h4>ISSTracker</h4>
+      <p>An Android App which help users to track in real time the International Space Station position</p>
+
+
+      <ngb-carousel
+      [showNavigationArrows]="true"
+      [showNavigationIndicators]="true"
+      interval="5000"
+      [keyboard]="false"
+      [pauseOnHover]="true"
+      [wrap]="true"
+      [activeId]="'secondSlide'">
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img class="mySlides" alt="ISS Tracker's homepage" src="assets/img/ISSTracker/accueil.jpg" width="10%"/>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img class="mySlides" alt="ISS Tracker's following map" src="assets/img/ISSTracker/map.jpg" width="10%"/>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img class="mySlides" alt="ISS Tracker's astronaut informations" src="assets/img/ISSTracker/astros.jpg" width="10%"/>
+            </div>
+        </ng-template>
+      </ngb-carousel>
+
+      <a href="https://github.com/GregWss/ISSTracker">Dépôt Github</a>
+    </div>
+
+    <div class="subsection" data-aos="fade-up-left">
+      <h4>Game Jam</h4>
+      <p>Game done at Montréal Game Jam</p>
+    </div>
+  </div>
+
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(2)" id="aboutAnchor" class="section" data-aos="fade-up-right">
+    <h3>À propos & contact</h3>
+    <ul class="contactList">
+      <li><span style="text-decoration: underline">Mail :</span> weiss.gregory48@gmail.com</li>
+      <li><span style="text-decoration: underline">Github :</span> https://github.com/GregWss</li>
+      <li><span style="text-decoration: underline">LinkedIn :</span> https://www.linkedin.com/in/gregwss/</li>
+      <li><span style="text-decoration: underline">Compte Steam :</span></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>Section test</h3>
+
+    <div>
+      <button class="btn">Bouton test</button>
+    </div>
+
+    <div>
+      <a href="#">Lien de test</a>
+    </div>
+
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="customSwitch1">
+      <label class="custom-control-label" for="customSwitch1" style="color: white">Toggle this switch element</label>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

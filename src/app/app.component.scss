@@ -1,8 +1,9 @@
 /* VARIABLES */
-$background-color: #263238;
+$primary-color: #263238;
+$primary-color-light: #4f5b62;
 $accent-color: #ffca28;
 $accent-color-light: #fffd61;
-/* ALL ANIMATIONS ARE MADE WITH AOS : https://michalsnik.github.io/aos/ */
+/* All animations are made thanks to aos : https://michalsnik.github.io/aos/ */
 
 /* Title & header style */
 /* Header Icon font : https://www.dafont.com/minecrafter.font */
@@ -101,20 +102,44 @@ $accent-color-light: #fffd61;
 	box-shadow: 0 0 0 2px white;
 }
 
-/* Top carousel style */
+/* Content */
+.container {
+  margin-top: 100px;
+}
+
+.bubble {
+  padding-bottom: 15px;
+}
+
+.bubbleLeft {
+  background-color: $primary-color-light;
+  border: 1px solid $accent-color;
+  border-radius: 10px;
+}
+
+.bubbleRight {
+  background-color: $primary-color-light;
+  border: 1px solid $accent-color;
+  border-radius: 10px;
+}
+
+.projectFightDemo {
+  max-width: 100%;
+}
+
+.videoPlayer {
+  max-width: 100%;
+}
+
+/* Carousel style */
 ngb-carousel {
-    max-width: 700px;
+    max-width: 100%;
     margin: 50px auto;
 }
 
 ngb-carousel img {
-    width: 100%;
+    width: 50%;
     outline: none;
-}
-
-ngb-carousel {
-    width: inherit;
-    height: inherit;
 }
 
 .carousel-inner {
@@ -146,36 +171,4 @@ ngb-carousel {
 
 .carousel-indicators{
     z-index: 20;
-}
-
-/* projectSurvival */
-#projectSurvival {
-  height: 400px;
-  background-image: url("../assets/img/2DFight/demo1.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  box-shadow: 0 0 8px 8px $background-color inset;
-}
-
-#projectSurvival p, #projectSurvival li, #projectSurvival h4 {
-  color: black;
-}
-
-#projectSurvival h4 {
-  margin-left: 25px;
-  padding-top: 15px;
-}
-
-/* projectSurvival carousel style */
-
-
-/* Contact style */
-.contactList {
-  list-style: none;
 }

@@ -1,12 +1,13 @@
 /* VARIABLES */
-$background-color: #263238;
+$primary-color: #263238;
+$primary-color-light: #4f5b62;
 $accent-color: #ffca28;
 $accent-color-light: #fffd61;
 
 /* REUSABLE AND GLOBAL STYLES */
 
 body {
-  background-color: $background-color;
+  background-color: $primary-color;
 }
 
 /* Every text set to white */
@@ -23,34 +24,7 @@ h4 {
 }
 
 /* Content sections and subsections styles */
-.content {
-  margin-left: 25px;
-  margin-right: 100px;
-}
 
-.no-margin-top {
-  margin-top: 15px !important;
-}
-
-.section {
-  margin-top: 100px;
-}
-
-.section p {
-  margin-top: 25px;
-  padding-left: 50px;
-  text-indent: 25px;
-}
-
-.subsection {
-  margin-top: 50px;
-}
-
-.subsection p {
-  margin-top: 25px;
-  padding-left: 50px;
-  text-indent: 25px;
-}
 
 /* Buttons styles and effects */
 .btn {

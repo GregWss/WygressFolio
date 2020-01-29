@@ -1,100 +1,95 @@
+<!-- Header: icon & navLinks -->
 <div class="toolbar" role="banner">
   <div data-aos="fade-down">
     <img class="titleIcon" src="assets/img/Logos/wygressFolioLogoRed.png">
   </div>
-  <div data-aos="fade-right">
+  <!-- <div data-aos="fade-right">
     <ul id="headerList">
       <li><a href="#projectsAnchor" class=".headerLink">Projets</a></li>
       <li><a href="#aboutAnchor" class=".headerLink">À propos</a></li>
     </ul>
-  </div>
+  </div> -->
 </div>
 
-<div class="dotstyle dotstyle-smalldotstroke">
+<!-- Liste de navigation en points -->
+<div data-aos="zoom-in" class="dotstyle dotstyle-smalldotstroke">
 	<ul>
-		<li (click)="isCurrent(1)" [ngClass]="{'current': selectedDot === 1}"><a href="#projectsAnchor">Projets</a></li>
-		<li (click)="isCurrent(2)" [ngClass]="{'current': selectedDot === 2}"><a href="#aboutAnchor">About</a></li>
+		<li (click)="isCurrent(1)" [ngClass]="{'current': selectedDot === 1}"><a href="#anchor2020">2020</a></li>
+		<li (click)="isCurrent(2)" [ngClass]="{'current': selectedDot === 2}"><a href="#anchor2019">2019</a></li>
+		<li (click)="isCurrent(3)" [ngClass]="{'current': selectedDot === 3}"><a href="#anchor2018">2018</a></li>
 	</ul>
 </div>
 
-<div class="content">
-  <div class="section" data-aos="fade-up-right">
-    <ngb-carousel
-    [showNavigationArrows]="true"
-    [showNavigationIndicators]="true"
-    interval="5000"
-    [keyboard]="false"
-    [pauseOnHover]="true"
-    [wrap]="true"
-    [activeId]="'secondSlide'">
-      <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-              <img src="assets/img/topCarousel/demo1.gif" alt="">
-          </div>
-          <div class="carousel-caption">
-              <h3>Current project</h3>
-              <p>A local multiplayer fight game</p>
-          </div>
-      </ng-template>
-      <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-              <img src="assets/img/topCarousel/HellblazeMainTitle.png" alt="">
-          </div>
-          <div class="carousel-caption">
-              <h3>Hellblaze project</h3>
-              <p>A third person beat'em'all</p>
-          </div>
-      </ng-template>
-      <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-              <img src="assets/img/topCarousel/ray-tracing_spheres.bmp" alt="">
-          </div>
-          <div class="carousel-caption">
-              <h3>First ray tracing render</h3>
-              <p>My first render using ray tracing in C++</p>
-          </div>
-      </ng-template>
-    </ngb-carousel>
+<!-- Content -->
+<div class="container offset-1 col-10">
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(1)" id="anchor2020" class="offset-md-1">
+    <h3>2020</h3>
   </div>
-
-  <div id="projectsAnchor" class="section">
-    <h3>Projets</h3>
-
-    <div id="projectSurvival" class="subsection no-margin-top" data-aos="fade-up-right">
-      <h4>Projet en cours</h4>
-      <p>Un jeu en multijoueur local dans lequel deux joueurs s'affrontent pour survivre.</p>
-
-      <ul>
-        <li><span style="text-decoration: underline">Style :</span> 2D Plateforme / Combat</li>
-        <li><span style="text-decoration: underline">Techno :</span> Unity</li>
-        <li><span style="text-decoration: underline">Nombre de joueurs :</span> 2 (4 dans le futur)</li>
-      </ul>
+  <div class="row justify-content-around">
+    <div class="bubble bubbleLeft col-md-4 col-sm-12 col-xs-12">
+      <p>Game Jam</p>
     </div>
-
-    <div class="subsection" data-aos="fade-up-left">
-      <app-hellblaze-infos></app-hellblaze-infos>
-    </div>
-
-    <div class="subsection" data-aos="fade-up-right">
-      <app-isstracker-carousel></app-isstracker-carousel>
-    </div>
-
-    <div class="subsection" data-aos="fade-up-left">
-      <h4>Game Jam</h4>
-      <p>Game done at Montréal Game Jam</p>
+    <div class="bubble bubbleRight col-md-4 col-sm-12 col-xs-12">
+      <p>Projet Fight</p>
+      <img class="projectFightDemo" src="assets/img/topCarousel/demo1.gif" alt="">
     </div>
   </div>
 
-  <div id="aboutAnchor" class="section" data-aos="fade-up-right">
-    <h3>À propos & contact</h3>
-    <ul class="contactList">
-      <li><span style="text-decoration: underline">Mail :</span> weiss.gregory48@gmail.com</li>
-      <li><span style="text-decoration: underline">Github :</span> https://github.com/GregWss</li>
-      <li><span style="text-decoration: underline">LinkedIn :</span> https://www.linkedin.com/in/gregwss/</li>
-      <li><span style="text-decoration: underline">Compte Steam :</span></li>
-    </ul>
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(2)" id="anchor2019" class="offset-md-1">
+    <h3>2019</h3>
+  </div>
+  <div class="row justify-content-around">
+    <div class="bubble bubbleLeft col-md-4 col-sm-12 col-xs-12">
+      <p>ISSTracker</p>
+      <ngb-carousel
+      [showNavigationArrows]="true"
+      [showNavigationIndicators]="true"
+      interval="5000"
+      [keyboard]="false"
+      [pauseOnHover]="true"
+      [wrap]="true"
+      [activeId]="'secondSlide'">
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img class="mySlides" alt="ISS Tracker's homepage" src="assets/img/ISSTracker/accueil.jpg" width="10%"/>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img class="mySlides" alt="ISS Tracker's following map" src="assets/img/ISSTracker/map.jpg" width="10%"/>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img class="mySlides" alt="ISS Tracker's astronaut informations" src="assets/img/ISSTracker/astros.jpg" width="10%"/>
+            </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <div class="bubble bubbleRight col-md-4 col-sm-12 col-xs-12">
+      <p>Hellblaze</p>
+      <iframe class="videoPlayer" src="https://www.youtube.com/embed/DEbtSmcdpt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </div>
 
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(3)" id="anchor2018" class="offset-md-1">
+    <h3>2018</h3>
+  </div>
+  <div class="row justify-content-around">
+    <div class="bubble bubbleLeft col-md-4 col-sm-12 col-xs-12">
+      <p>MeliorIHM</p>
+    </div>
+    <div class="bubble bubbleRight col-md-4 col-sm-12 col-xs-12">
+      <p>SAFER</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="bubble bubbleLeft col-md-4 col-sm-12 col-xs-12 offset-md-1">
+      <p>SImage</p>
+    </div>
+  </div>
+
+  <hr>
   <div>
     <h3>Section test</h3>
 
@@ -113,5 +108,8 @@
   </div>
 </div>
 
+<div class="footer">
+  <p> Ceci sera le footer !</p>
+</div>
 
 <router-outlet></router-outlet>
