@@ -1,6 +1,7 @@
 /* VARIABLES */
 $primary-color: #263238;
 $primary-color-light: #4f5b62;
+$primary-color-dark: #000a12;
 $accent-color: #ffca28;
 $accent-color-light: #fffd61;
 
@@ -15,17 +16,26 @@ h1, h2, h3, h4, h5, p, li {
   color: white;
 }
 
+p {
+  text-indent: 25px;
+  text-align: justify;
+}
+
 h3 {
   font-size: 40px;
+  text-align: center;
+  padding-bottom: 25px;
 }
 
 h4 {
   font-size: 30px;
   margin-left: 25px;
+  margin-bottom: 25px;
   padding-top: 10px;
 }
 
 h5 {
+  font-size: 20px;
   padding-top: 10px;
 }
 
@@ -33,6 +43,30 @@ h5 {
 /* Responsive images */
 .imgDemo {
   max-width: 100%;
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+/* Line separator */
+hr {
+  width: 60%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: dotted;
+  border-width: 5px 0px 0px 0px;
+  border-color: $accent-color-light;
+}
+
+@media only screen and (max-width: 768px) {
+  hr {
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
 }
 
 /* Buttons styles and effects */
@@ -79,7 +113,7 @@ a:hover {
 
 /* Carousel style */
 ngb-carousel {
-    max-width: 60%;
+    max-width: 75%;
     margin: 50px auto;
 }
 
@@ -117,4 +151,127 @@ ngb-carousel img {
 
 .carousel-indicators{
     z-index: 20;
+}
+
+/* Project ressources style */
+.projectLinks {
+  border: 1px solid $accent-color;
+  border-radius: 10px;
+  height: 50px;
+}
+
+.dlButton {
+  float: left;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.otherProjectLinks {
+  padding-top: 7px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+  .projectLinks {
+    height: auto;
+  }
+
+  .dlButton {
+    float: none;
+    overflow: auto;
+    text-align: center;
+  }
+
+  .otherProjectLinks {
+    overflow: auto;
+  }
+
+  .otherProjectLinks p {
+    text-indent: none;
+    text-align: center;
+  }
+}
+
+/* Dot navigation */
+.dotstyle {
+  position: fixed;
+  right: 5px;    // 5px relative to the most-right of parent
+  margin-top: 50px;
+  z-index: 100;
+}
+
+.dotstyle ul {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	cursor: default;
+}
+
+.dotstyle li {
+	position: relative;
+	display: block;
+	margin: 0 16px;
+  margin-top: 10px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.dotstyle li a {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border-radius: 50%;
+	background-color: #fff;
+	background-color: rgba(255,255,255,0.3);
+	text-indent: -999em;
+	cursor: pointer; /* make the text accessible to screen readers */
+	position: absolute;
+}
+
+/* Small dot with stroke */
+.dotstyle-smalldotstroke li {
+	border-radius: 50%;
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+	-webkit-transition: box-shadow 0.3s ease;
+	-moz-transition: box-shadow 0.3s ease;
+	-o-transition: box-shadow 0.3s ease;
+	transition: box-shadow 0.3s ease;
+}
+
+.dotstyle-smalldotstroke li a {
+	background-color: rgba(255, 255, 255, 0.7);
+	-webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+	-moz-transition: background-color 0.3s ease, -moz-transform 0.3s ease;
+	-o-transition: background-color 0.3s ease, -o-transform 0.3s ease;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dotstyle-smalldotstroke li a:hover,
+.dotstyle-smalldotstroke li a:focus,
+.dotstyle-smalldotstroke li.current a {
+	background-color: white;
+}
+
+.dotstyle-smalldotstroke li.current a {
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	-o-transform: scale(0.4);
+	transform: scale(0.4);
+}
+
+.dotstyle-smalldotstroke li.current {
+	box-shadow: 0 0 0 2px white;
+}
+
+/* Footer style */
+.footer {
+  background-color: $primary-color-dark;
+  height: 200px;
 }

@@ -27,107 +27,54 @@ $accent-color-light: #fffd61;
   padding: 25px;
 }
 
-/* Dot navigation */
-.dotstyle {
-  position: fixed;
-  right: 5px;    // 5px relative to the most-right of parent
-  margin-top: 50px;
-}
+@media only screen and (max-width: 768px) {
+  #headerList {
+    display: none;
+  }
 
-.dotstyle ul {
-	position: relative;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	cursor: default;
-}
-
-.dotstyle li {
-	position: relative;
-	display: block;
-	margin: 0 16px;
-  margin-top: 10px;
-	width: 16px;
-	height: 16px;
-	cursor: pointer;
-}
-
-.dotstyle li a {
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	outline: none;
-	border-radius: 50%;
-	background-color: #fff;
-	background-color: rgba(255,255,255,0.3);
-	text-indent: -999em;
-	cursor: pointer; /* make the text accessible to screen readers */
-	position: absolute;
-}
-
-/* Small dot with stroke */
-.dotstyle-smalldotstroke li {
-	border-radius: 50%;
-	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
-	-webkit-transition: box-shadow 0.3s ease;
-	-moz-transition: box-shadow 0.3s ease;
-	-o-transition: box-shadow 0.3s ease;
-	transition: box-shadow 0.3s ease;
-}
-
-.dotstyle-smalldotstroke li a {
-	background-color: rgba(255, 255, 255, 0.7);
-	-webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
-	-moz-transition: background-color 0.3s ease, -moz-transform 0.3s ease;
-	-o-transition: background-color 0.3s ease, -o-transform 0.3s ease;
-	transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.dotstyle-smalldotstroke li a:hover,
-.dotstyle-smalldotstroke li a:focus,
-.dotstyle-smalldotstroke li.current a {
-	background-color: white;
-}
-
-.dotstyle-smalldotstroke li.current a {
-	-webkit-transform: scale(0.4);
-	-moz-transform: scale(0.4);
-	-o-transform: scale(0.4);
-	transform: scale(0.4);
-}
-
-.dotstyle-smalldotstroke li.current {
-	box-shadow: 0 0 0 2px white;
+  .titleIcon {
+    padding-bottom: 20px;
+  }
 }
 
 /* Content */
-.container {
+.content {
   margin-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    margin-top: 50px;
+    padding-left: 10px;
+    padding-right: 50px;
+  }
 }
 
 /* General games presentation */
-.gamePres {
-    background-color: rgba(79, 91, 98, 0.5);
-    border-top: 3px solid $accent-color;
-    border-bottom: 3px solid $accent-color;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.gameInfos {
+  margin-right: 25px;
 }
 
 /* Hellblaze presentation */
 .hellblazeVideo {
-  margin-left: 25px;
-  margin-right: 25px;
+  padding: 50px;
+  text-align: center;
+  background-image: url("../assets/img/Hellblaze/hellblaze_background.png");
+  background-attachment: fixed;
 }
 
 .videoPlayer {
   max-width: 100%;
+  width: 560px;
 }
 
+/* ERROR_418 pres */
 
-/* Classes pour les bulles de présentation */
+/* 2D Fight pres */
+
+/* Classes for other projects bubble pres */
 .bubble {
   padding-bottom: 15px;
   background-color: rgba(79, 91, 98, 0.5);
@@ -135,10 +82,24 @@ $accent-color-light: #fffd61;
   border-radius: 10px;
 }
 
-.bubbleLeft {
-
+@media only screen and (max-width: 768px) {
+  .bubble {
+    margin-bottom: 25px;
+  }
 }
 
-.bubbleRight {
+/* Author pres */
+#profilePicture {
+  max-width: 100%;
+  border-radius: 50%;
+}
 
+#profilePictureDiv {
+  width: 100px;
+  float: left;
+}
+
+#profileDesc {
+  margin-left: 15%;
+  height: 100px;
 }

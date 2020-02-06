@@ -3,12 +3,13 @@
   <div data-aos="fade-down">
     <img class="titleIcon" src="assets/img/Logos/wygressFolioLogoRed.png">
   </div>
-  <!-- <div data-aos="fade-right">
+  <div data-aos="fade-right">
     <ul id="headerList">
-      <li><a href="#projectsAnchor" class=".headerLink">Projets</a></li>
-      <li><a href="#aboutAnchor" class=".headerLink">À propos</a></li>
+      <li><a href="#anchorHellblaze">Jeux</a></li>
+      <li><a href="#anchorOthers">Autres</a></li>
+      <li><a href="#anchorAbout">À propos</a></li>
     </ul>
-  </div> -->
+  </div>
 </div>
 
 <!-- Liste de navigation en points -->
@@ -18,164 +19,228 @@
 		<li (click)="isCurrent(2)" [ngClass]="{'current': selectedDot === 2}"><a href="#anchorERROR_418">ERROR_418</a></li>
 		<li (click)="isCurrent(3)" [ngClass]="{'current': selectedDot === 3}"><a href="#anchor2DFight">2DFight</a></li>
 		<li (click)="isCurrent(4)" [ngClass]="{'current': selectedDot === 4}"><a href="#anchorOthers">Others Projects</a></li>
+		<li (click)="isCurrent(5)" [ngClass]="{'current': selectedDot === 5}"><a href="#anchorAbout">About me</a></li>
 	</ul>
 </div>
 
 <!-- Content -->
-<div class="container offset-1 col-10">
-  <div>
-    <p>Une description originale et amusante. (pas pour l'instant du coup)</p>
-  </div>
+<div class="hellblazeVideo">
+  <iframe class="videoPlayer" height="315" src="https://www.youtube.com/embed/DEbtSmcdpt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
+<div class="content">
   <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(1)" id="anchorHellblaze">
-    <h3>Jeux</h3>
+    <!-- <h3>Jeux</h3> -->
   </div>
-  <div class="gamePres" data-aos="fade-right">
-    <h4>Hellblaze</h4>
-    <div class="hellblazeVideo">
-      <iframe class="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/DEbtSmcdpt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+  <div data-aos="fade-right">
+    <!-- <h4>Hellblaze</h4> -->
 
     <h5>Infos</h5>
-    <p>Hellblaze est un prototype de jeu RPG / Beat'em'all à la 3ème personne. Il a été réalisé lors de notre formation en création de jeux vidéo de l'Université du Québec à Chicoutimi.</p>
-    <h5>Contrôles</h5>
-    <ul>
-      <li>WASD / Joystick gauche : bouger le personnage</li>
-      <li>Souris / Joystick droit : bouger la caméra</li>
-      <li>Clic gauche / X : attaquer</li>
-      <li>Echap / Start : pause</li>
-      <li>I / Select : stats de progression</li>
-    </ul>
+    <p>Hellblaze est un prototype de jeu RPG / Beat'em'all à la 3ème personne. Il a été réalisé lors de notre formation en création de jeux vidéo de l'Université du Québec à Chicoutimi. Vous incarnez un anti-héros dont le but est de regagner son statut de démon. Il doit pour cela progresser en accomplissant différents objectifs, comme par exemple tuer un certain nombre de monstres ou bien terrasser un boss.</p>
 
-    <h5>Equipe</h5>
     <div class="row justify-content-around">
-      <div class="col-md-6 col-sm-12 col-xs-12">
+      <div class="col-md-6">
+        <h5>Contrôles</h5>
+        <ul>
+          <li>WASD / Joystick gauche : bouger le personnage</li>
+          <li>Souris / Joystick droit : bouger la caméra</li>
+          <li>Clic gauche / X : attaquer</li>
+          <li>Echap / Start : pause</li>
+          <li>I / Select : stats de progression</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Equipe</h5>
         <ul>
           <li>Samuel BUSSON</li>
+          <li>Florian DE LIMA</li>
           <li>Gabriel DERRIEN</li>
           <li>Lorenzo MARNAT</li>
+          <li>Hugo MOHAMED</li>
+          <li>Baptiste ROUPAIN</li>
           <li>Grégory WEISS</li>
         </ul>
       </div>
-      <div class="col-md-6 col-sm-12 col-xs-12">
-        <ul>
-          <li>Florian DE LIMA</li>
-          <li>Hugo MOHAMED</li>
-          <li>Baptiste ROUPAIN</li>
-        </ul>
+    </div>
+
+    <div class="projectRessources">
+      <h5>Suivre le projet</h5>
+      <div class="projectLinks">
+        <div class="dlButton">
+          <input type="button" value="Télécharger" class="btn" onclick="window.location='assets/downloads/HELLBLAZE.zip';">
+        </div>
       </div>
-    </div>
-
-    <input type="button" value="Télécharger" class="btn" onclick="window.location='assets/downloads/HELLBLAZE.zip';">
-  </div>
-
-  <div class="gamePres" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(2)" id="anchorERROR_418" data-aos="fade-left">
-    <h4>ERROR 418</h4>
-    <img src="assets/img/ERROR_418/img1.jpg" alt="Illustration 1">
-    <img src="assets/img/ERROR_418/img2.jpg" alt="Illustration 2">
-
-    <h5>Infos</h5>
-    <p>Réalisé dans le cadre de la Global Game Jam 2020 à Montréal. Thème : repair</p>
-    <h5>Contrôles</h5>
-    <ul>
-      <li>WASD / Joystick gauche : bouger le personnage</li>
-      <li>Entrée / A : Réparer</li>
-    </ul>
-
-    <h5>Equipe</h5>
-    <ul>
-      <li>Pas sûr 1</li>
-      <li>Pas sûr 2</li>
-      <li>Pas sûr 3</li>
-      <li>Pas sûr 4</li>
-    </ul>
-
-    <input type="button" value="Télécharger" class="btn" onclick="window.location='assets/downloads/ERROR_418.zip';">
-    <p>Vous pouvez aussi voir le jeu sur <a href="https://globalgamejam.org/2020/games/error-418-6">le site GGJ</a> ou sur <a href="https://github.com/gabrieldrn/ERROR-418">sa page GitHub !</a></p>
-  </div>
-
-  <div class="gamePres" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(3)" id="anchor2DFight" data-aos="fade-right">
-    <h4>Projet en cours : 2D Fight</h4>
-    <img class="imgDemo" src="assets/img/2DFight/demo1.gif" alt="Image animée de deux joueurs se battant">
-
-    <h5>Infos</h5>
-    <p>Un "Versus Fighting Game" en 2D qui a pour but de rassembler (ou fâcher) les joueurs.</p>
-    <h5>Contrôles</h5>
-    <ul>
-      <li>AD / Joystick gauche : bouger le personnage</li>
-      <li>Espace / A : sauter</li>
-      <li>Clic gauche / X : tirer</li>
-    </ul>
-
-    <h5>Conseils</h5>
-    <ul>
-      <li>Utilisez les murs pour continuer vos sauts !</li>
-      <li>Gérer vos flêches, elles sont limitées !</li>
-      <li>Ramassez des flêches quand vous en êtes à cours !</li>
-    </ul>
-
-    <p>Vous pouvez voir le code source du jeu sur <a href="https://github.com/GregWss">sa page GitHub !</a></p>
-  </div>
-
-  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(4)" id="anchorOthers" class="offset-md-1">
-    <h3>Autres projets</h3>
-  </div>
-  <div class="row justify-content-around">
-    <div class="bubble bubbleLeft col-md-5 col-sm-12 col-xs-12" data-aos="fade-right">
-      <h5>ISSTracker</h5>
-      <ngb-carousel
-      [showNavigationArrows]="true"
-      [showNavigationIndicators]="true"
-      interval="5000"
-      [keyboard]="false"
-      [pauseOnHover]="true"
-      [wrap]="true"
-      [activeId]="'secondSlide'">
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img class="mySlides" alt="ISS Tracker's homepage" src="assets/img/ISSTracker/accueil.jpg" width="10%"/>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img class="mySlides" alt="ISS Tracker's following map" src="assets/img/ISSTracker/map.jpg" width="10%"/>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img class="mySlides" alt="ISS Tracker's astronaut informations" src="assets/img/ISSTracker/astros.jpg" width="10%"/>
-            </div>
-        </ng-template>
-      </ngb-carousel>
-    </div>
-    <div class="bubble bubbleRight col-md-5 col-sm-12 col-xs-12" data-aos="fade-left">
-      <h5>Synthèse d'images</h5>
-      <img class="imgDemo" src="assets/img/SImage/ray-tracing_spheres.bmp" alt="Image réalisé à l'aide du lancer de rayon"/>
-      <p>Image réalisée grâce à un programme de "RayTracing" en C++</p>
     </div>
   </div>
 
   <hr>
-  <div>
-    <h3>Section test</h3>
 
-    <div>
-      <button class="btn">Bouton test</button>
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(2)" id="anchorERROR_418" data-aos="fade-left">
+    <h4>ERROR 418</h4>
+
+    <ngb-carousel
+    [showNavigationArrows]="true"
+    [showNavigationIndicators]="true"
+    interval="5000"
+    [keyboard]="false"
+    [pauseOnHover]="true"
+    [wrap]="true"
+    [activeId]="'secondSlide'">
+      <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="assets/img/ERROR_418/img2.png" alt="Illustration 1">
+          </div>
+      </ng-template>
+      <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="assets/img/ERROR_418/img3.png" alt="Illustration 2">
+          </div>
+      </ng-template>
+    </ngb-carousel>
+
+    <h5>Infos</h5>
+    <p>À l'occasion de la Global Game Jam 2020, nous avons formé une équipe de 8 passionnés pour réaliser un jeu en 48h sur le thème "Repair". Le principe est simple : vous êtes un robot chargé de protéger les derniers "datacenters" d'une humanité disparue. Une IA a trouvé un moyen de hacker ces serveurs et veut les détruire. Vous devez alors courir de serveur en serveur pour les réparer avant le temps imparti pour protéger les données.</p>
+
+    <div class="row justify-content-around">
+      <div class="col-md-6">
+        <h5>Contrôles</h5>
+        <ul>
+          <li>WASD / Joystick gauche : bouger le personnage</li>
+          <li>Entrée / A : Réparer</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Equipe</h5>
+        <ul>
+          <li>Gabriel DERRIEN</li>
+          <li>Justin GARCIA</li>
+          <li>Jaber MERCIER</li>
+          <li>Alex MORIN</li>
+          <li>Yanis OULED MOUSSA</li>
+          <li>Baptiste ROUPAIN</li>
+          <li>Paul SIFFRE</li>
+          <li>Grégory WEISS</li>
+        </ul>
+      </div>
     </div>
 
-    <div>
-      <a href="#">Lien de test</a>
-    </div>
-
-    <div class="custom-control custom-switch">
-      <input type="checkbox" class="custom-control-input" id="customSwitch1">
-      <label class="custom-control-label" for="customSwitch1" style="color: white">Toggle this switch element</label>
+    <div class="projectRessources">
+      <h5>Suivre le projet</h5>
+      <div class="projectLinks">
+        <div class="dlButton">
+          <input type="button" value="Télécharger" class="btn" onclick="window.location='assets/downloads/ERROR_418.zip';">
+        </div>
+        <div class="otherProjectLinks">
+          <p>Vous pouvez aussi retrouver le jeu sur <a href="https://globalgamejam.org/2020/games/error-418-6">le site GGJ</a> ou sur <a href="https://github.com/gabrieldrn/ERROR-418">sa page GitHub !</a></p>
+        </div>
+      </div>
     </div>
   </div>
+
+  <hr>
+
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(3)" id="anchor2DFight" data-aos="fade-right">
+    <h4>Projet en cours : 2D Fight</h4>
+
+    <img class="imgDemo" src="assets/img/2DFight/demo1.gif" alt="Image animée de deux joueurs se battant">
+
+    <h5>Infos</h5>
+    <p>Un "Versus Fighting Game" en 2D qui aura pour but de rassembler (ou fâcher) les joueurs.</p>
+
+    <div class="row justify-content-around">
+      <div class="col-md-6">
+        <h5>Contrôles</h5>
+        <ul>
+          <li>AD / Joystick gauche : bouger le personnage</li>
+          <li>Espace / A : sauter</li>
+          <li>Clic gauche / X : tirer</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Conseils</h5>
+        <ul>
+          <li>Utilisez les murs pour continuer vos sauts !</li>
+          <li>Gérer vos flêches, elles sont limitées !</li>
+          <li>Ramassez des flêches quand vous en êtes à cours !</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="projectRessources">
+      <h5>Suivre le projet</h5>
+      <div class="projectLinks">
+        <div class="otherProjectLinks">
+          <p>Vous pouvez voir le code source du jeu sur <a href="https://github.com/GregWss">sa page GitHub !</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(4)" id="anchorOthers">
+    <h3>Autres projets</h3>
+  </div>
+  <div class="col-md-12">
+    <div class="row justify-content-around">
+      <div class="bubble bubbleLeft col-md-5 col-sm-12 col-xs-12" data-aos="fade-right">
+        <h5>ISSTracker</h5>
+        <ngb-carousel
+        [showNavigationArrows]="true"
+        [showNavigationIndicators]="true"
+        interval="5000"
+        [keyboard]="false"
+        [pauseOnHover]="true"
+        [wrap]="true"
+        [activeId]="'secondSlide'">
+          <ng-template ngbSlide>
+              <div class="picsum-img-wrapper">
+                <img class="mySlides" alt="ISS Tracker's homepage" src="assets/img/ISSTracker/accueil.jpg" width="10%"/>
+              </div>
+          </ng-template>
+          <ng-template ngbSlide>
+              <div class="picsum-img-wrapper">
+                <img class="mySlides" alt="ISS Tracker's following map" src="assets/img/ISSTracker/map.jpg" width="10%"/>
+              </div>
+          </ng-template>
+          <ng-template ngbSlide>
+              <div class="picsum-img-wrapper">
+                <img class="mySlides" alt="ISS Tracker's astronaut informations" src="assets/img/ISSTracker/astros.jpg" width="10%"/>
+              </div>
+          </ng-template>
+        </ngb-carousel>
+        <p>Grâce à cette application Android, vous pouvez suivre en temps réel sur une carte la trajectoire de la Station Spatiale Internationale. Vous pouvez également obtenir diverses informations sur les astronautes à bord ou bien obtenir un rappel pour sortir observer la station lorsqu'elle passe au dessus de votre tête.</p>
+      </div>
+      <div class="bubble bubbleRight col-md-5 col-sm-12 col-xs-12" data-aos="fade-left">
+        <h5>Synthèse d'images</h5>
+        <img class="imgDemo" src="assets/img/SImage/ray-tracing_spheres.bmp" alt="Image réalisé à l'aide du lancer de rayon"/>
+        <p>Image réalisée grâce à un programme de "RayTracing" en C++</p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(5)" id="anchorAbout">
+    <h3>À propos</h3>
+    <div>
+      <div id="profilePictureDiv">
+        <img id="profilePicture" src="assets/img/profile_pictures/profile_picture_1.jpeg" alt="Profile Picture">
+      </div>
+      <div id="profileDesc">
+        <p>Une description originale et amusante. (pas pour l'instant du coup)</p>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<div class="footer">
+<div class="footer col-12">
   <p> Ceci sera le footer !</p>
+  <div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+    <label class="custom-control-label" for="customSwitch1" style="color: white">Toggle this switch element</label>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
