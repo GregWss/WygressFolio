@@ -8,7 +8,7 @@ import * as AOS from 'aos';
 })
 export class AppComponent implements OnInit {
   title = 'WygressFolio';
-  selectedDot = 0; // always start at first dot (for now)
+  selectedDot = 1; // always start at first dot (for now)
 
   constructor() { }
 

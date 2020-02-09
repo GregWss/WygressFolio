@@ -4,6 +4,8 @@ $primary-color-light: #4f5b62;
 $primary-color-dark: #000a12;
 $accent-color: #ffca28;
 $accent-color-light: #fffd61;
+$selection-color: rgba(255, 253, 97, 0.99);
+$selection-color-img: rgba(255, 253, 97, 0.6);
 
 /* REUSABLE AND GLOBAL STYLES */
 
@@ -11,9 +13,15 @@ body {
   background-color: $primary-color;
 }
 
-/* Every text set to white */
+/* Text style */
 h1, h2, h3, h4, h5, p, li {
   color: white;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, p::selection, li::selection {
+  color: black;
+  background: $selection-color;
 }
 
 p {
@@ -23,23 +31,35 @@ p {
 
 h3 {
   font-size: 40px;
+  margin-bottom: 25px;
   text-align: center;
-  padding-bottom: 25px;
 }
 
 h4 {
   font-size: 30px;
-  margin-left: 25px;
-  margin-bottom: 25px;
   padding-top: 10px;
 }
 
-h5 {
-  font-size: 20px;
-  padding-top: 10px;
+img::selection {
+  background: $selection-color-img;
+}
+
+label::selection {
+  color: black;
+  background: $selection-color;
 }
 
 /* Content sections and subsections styles */
+/* Emphasise some elements */
+.emphasise {
+  color: $accent-color;
+}
+
+.emphasise::selection {
+  color: black;
+  background: $selection-color;
+}
+
 /* Responsive images */
 .imgDemo {
   max-width: 100%;
@@ -48,6 +68,10 @@ h5 {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
+}
+
+.logos {
+  padding: 5px;
 }
 
 /* Line separator */
@@ -109,6 +133,19 @@ a:visited {
 a:hover {
   color: $accent-color-light;
   text-decoration: none;
+}
+
+a::selection {
+  color: black;
+  background: $selection-color;
+}
+
+.specialLink {
+  color: white !important;
+}
+
+.specialLink:hover {
+  color: white !important;
 }
 
 /* Carousel style */
@@ -268,10 +305,4 @@ ngb-carousel img {
 
 .dotstyle-smalldotstroke li.current {
 	box-shadow: 0 0 0 2px white;
-}
-
-/* Footer style */
-.footer {
-  background-color: $primary-color-dark;
-  height: 200px;
 }

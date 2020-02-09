@@ -1,46 +1,79 @@
 <!-- Header: icon & navLinks -->
-<div class="toolbar" role="banner">
-  <div data-aos="fade-down">
-    <img class="titleIcon" src="assets/img/Logos/wygressFolioLogoRed.png">
+<div id="topDiv">
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(1)" id="anchorTop" class="toolbar" role="banner">
+    <div data-aos="fade-down">
+      <img class="titleIcon" src="assets/img/Logos/wygressFolioLogoRed.png">
+    </div>
+    <!-- <div data-aos="fade-right">
+      <ul id="headerList">
+        <li><a href="#anchorSkills">Jeux</a></li>
+        <li><a href="#anchorOthers">Autres</a></li>
+        <li><a href="#anchorAbout">À propos</a></li>
+      </ul>
+    </div> -->
   </div>
+
+  <!-- Liste de navigation en points -->
+  <div data-aos="zoom-in" class="dotstyle dotstyle-smalldotstroke">
+  	<ul>
+  		<li (click)="isCurrent(1)" [ngClass]="{'current': selectedDot === 1}"><a href="#anchorTop">Top</a></li>
+  		<li (click)="isCurrent(2)" [ngClass]="{'current': selectedDot === 2}"><a href="#anchorSkills">Hellblaze</a></li>
+  		<li (click)="isCurrent(3)" [ngClass]="{'current': selectedDot === 3}"><a href="#anchorERROR_418">ERROR_418</a></li>
+  		<li (click)="isCurrent(4)" [ngClass]="{'current': selectedDot === 4}"><a href="#anchor2DFight">2DFight</a></li>
+  		<li (click)="isCurrent(5)" [ngClass]="{'current': selectedDot === 5}"><a href="#anchorOthers">Others Projects</a></li>
+  	</ul>
+  </div>
+
+  <!-- Content -->
+  <div class="aboutSection">
+    <div id="profilePictureDiv" data-aos="fade-right">
+      <img id="profilePicture" src="assets/img/profile_pictures/profile_picture_1.jpeg" alt="Profile Picture">
+    </div>
+    <div id="profileDesc" data-aos="zoom-in">
+      <h1>BONJOUR !</h1>
+      <p>Je suis développeur ! Des sites web aux jeux vidéo en passant par les logiciels et les applications mobiles, mes expérimentations sont sans limite !</p>
+    </div>
+    <img class="nextImg" src="assets/img/icons/Arrow-down_black.png" data-aos="fade-up">
+  </div>
+
+  <div id="gradientBuffer">
+  </div>
+</div>
+
+<div class="content" data-aos="zoom-in">
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(2)" id="anchorSkills" class="skillsDiv">
+    <h3>Skills</h3>
+    <p><span class="emphasise disapearWhenSmall">Je parle couramment le : </span>
+      <img class="logos" src="assets/img/Logos/C_Sharp_logo.png" alt="C Sharp">
+      <img class="logos" id="c_plus_logo" src="assets/img/Logos/C++_logo.png" alt="C ++">
+      <img class="logos" src="assets/img/Logos/HTML5_logo.png" alt="HTML">
+      <img class="logos" src="assets/img/Logos/CSS3_logo.png" alt="CSS">
+      <img class="logos" src="assets/img/Logos/JavaScript_logo.png" alt="JavaScript">
+      <img class="logos" src="assets/img/Logos/Python_logo.png" alt="Python">
+      <img class="logos" id="java_logo" src="assets/img/Logos/java_logo.png" alt="Java">
+    </p>
+    <p><span class="emphasise disapearWhenSmall">J'utilise ces outils : </span>
+      <img class="logos" src="assets/img/Logos/Unity_logo.png" alt="Unity">
+      <img class="logos" src="assets/img/Logos/Unreal_Engine_logo.png" alt="Unreal Engine">
+      <img class="logos" src="assets/img/Logos/Visual_Studio_logo.png" alt="Visual Studio">
+      <img class="logos" src="assets/img/Logos/Angular_logo.png" alt="Angular">
+      <img class="logos" src="assets/img/Logos/Android_Studio_logo.png" alt="Android Studio">
+      <img class="logos" src="assets/img/Logos/atom_logo.png" alt="Atom">
+    </p>
+    </div>
+
+
   <div data-aos="fade-right">
-    <ul id="headerList">
-      <li><a href="#anchorHellblaze">Jeux</a></li>
-      <li><a href="#anchorOthers">Autres</a></li>
-      <li><a href="#anchorAbout">À propos</a></li>
-    </ul>
-  </div>
-</div>
-
-<!-- Liste de navigation en points -->
-<div data-aos="zoom-in" class="dotstyle dotstyle-smalldotstroke">
-	<ul>
-		<li (click)="isCurrent(1)" [ngClass]="{'current': selectedDot === 1}"><a href="#anchorHellblaze">Hellblaze</a></li>
-		<li (click)="isCurrent(2)" [ngClass]="{'current': selectedDot === 2}"><a href="#anchorERROR_418">ERROR_418</a></li>
-		<li (click)="isCurrent(3)" [ngClass]="{'current': selectedDot === 3}"><a href="#anchor2DFight">2DFight</a></li>
-		<li (click)="isCurrent(4)" [ngClass]="{'current': selectedDot === 4}"><a href="#anchorOthers">Others Projects</a></li>
-		<li (click)="isCurrent(5)" [ngClass]="{'current': selectedDot === 5}"><a href="#anchorAbout">About me</a></li>
-	</ul>
-</div>
-
-<!-- Content -->
-<div class="hellblazeVideo">
-  <iframe class="videoPlayer" height="315" src="https://www.youtube.com/embed/DEbtSmcdpt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<div class="content">
-  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(1)" id="anchorHellblaze">
-    <!-- <h3>Jeux</h3> -->
-  </div>
-  <div data-aos="fade-right">
-    <!-- <h4>Hellblaze</h4> -->
-
-    <h5>Infos</h5>
+    <h3>Hellblaze</h3>
+    <div class="hellblazeVideo">
+      <iframe class="videoPlayer" height="315" src="https://www.youtube.com/embed/DEbtSmcdpt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <h4>Infos</h4>
     <p>Hellblaze est un prototype de jeu RPG / Beat'em'all à la 3ème personne. Il a été réalisé lors de notre formation en création de jeux vidéo de l'Université du Québec à Chicoutimi. Vous incarnez un anti-héros dont le but est de regagner son statut de démon. Il doit pour cela progresser en accomplissant différents objectifs, comme par exemple tuer un certain nombre de monstres ou bien terrasser un boss.</p>
 
     <div class="row justify-content-around">
       <div class="col-md-6">
-        <h5>Contrôles</h5>
+        <h4>Contrôles</h4>
         <ul>
           <li>WASD / Joystick gauche : bouger le personnage</li>
           <li>Souris / Joystick droit : bouger la caméra</li>
@@ -50,7 +83,7 @@
         </ul>
       </div>
       <div class="col-md-6">
-        <h5>Equipe</h5>
+        <h4>Equipe</h4>
         <ul>
           <li>Samuel BUSSON</li>
           <li>Florian DE LIMA</li>
@@ -64,7 +97,7 @@
     </div>
 
     <div class="projectRessources">
-      <h5>Suivre le projet</h5>
+      <h4>Suivre le projet</h4>
       <div class="projectLinks">
         <div class="dlButton">
           <input type="button" value="Télécharger" class="btn" onclick="window.location='assets/downloads/HELLBLAZE.zip';">
@@ -75,8 +108,8 @@
 
   <hr>
 
-  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(2)" id="anchorERROR_418" data-aos="fade-left">
-    <h4>ERROR 418</h4>
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(3)" id="anchorERROR_418" data-aos="fade-left">
+    <h3>ERROR 418</h3>
 
     <ngb-carousel
     [showNavigationArrows]="true"
@@ -98,19 +131,19 @@
       </ng-template>
     </ngb-carousel>
 
-    <h5>Infos</h5>
+    <h4>Infos</h4>
     <p>À l'occasion de la Global Game Jam 2020, nous avons formé une équipe de 8 passionnés pour réaliser un jeu en 48h sur le thème "Repair". Le principe est simple : vous êtes un robot chargé de protéger les derniers "datacenters" d'une humanité disparue. Une IA a trouvé un moyen de hacker ces serveurs et veut les détruire. Vous devez alors courir de serveur en serveur pour les réparer avant le temps imparti pour protéger les données.</p>
 
     <div class="row justify-content-around">
       <div class="col-md-6">
-        <h5>Contrôles</h5>
+        <h4>Contrôles</h4>
         <ul>
           <li>WASD / Joystick gauche : bouger le personnage</li>
           <li>Entrée / A : Réparer</li>
         </ul>
       </div>
       <div class="col-md-6">
-        <h5>Equipe</h5>
+        <h4>Equipe</h4>
         <ul>
           <li>Gabriel DERRIEN</li>
           <li>Justin GARCIA</li>
@@ -125,7 +158,7 @@
     </div>
 
     <div class="projectRessources">
-      <h5>Suivre le projet</h5>
+      <h4>Suivre le projet</h4>
       <div class="projectLinks">
         <div class="dlButton">
           <input type="button" value="Télécharger" class="btn" onclick="window.location='assets/downloads/ERROR_418.zip';">
@@ -139,17 +172,17 @@
 
   <hr>
 
-  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(3)" id="anchor2DFight" data-aos="fade-right">
-    <h4>Projet en cours : 2D Fight</h4>
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(4)" id="anchor2DFight" data-aos="fade-right">
+    <h3>Projet en cours : 2D Fight</h3>
 
     <img class="imgDemo" src="assets/img/2DFight/demo1.gif" alt="Image animée de deux joueurs se battant">
 
-    <h5>Infos</h5>
+    <h4>Infos</h4>
     <p>Un "Versus Fighting Game" en 2D qui aura pour but de rassembler (ou fâcher) les joueurs.</p>
 
     <div class="row justify-content-around">
       <div class="col-md-6">
-        <h5>Contrôles</h5>
+        <h4>Contrôles</h4>
         <ul>
           <li>AD / Joystick gauche : bouger le personnage</li>
           <li>Espace / A : sauter</li>
@@ -157,7 +190,7 @@
         </ul>
       </div>
       <div class="col-md-6">
-        <h5>Conseils</h5>
+        <h4>Conseils</h4>
         <ul>
           <li>Utilisez les murs pour continuer vos sauts !</li>
           <li>Gérer vos flêches, elles sont limitées !</li>
@@ -167,7 +200,7 @@
     </div>
 
     <div class="projectRessources">
-      <h5>Suivre le projet</h5>
+      <h4>Suivre le projet</h4>
       <div class="projectLinks">
         <div class="otherProjectLinks">
           <p>Vous pouvez voir le code source du jeu sur <a href="https://github.com/GregWss">sa page GitHub !</a></p>
@@ -178,13 +211,13 @@
 
   <hr>
 
-  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(4)" id="anchorOthers">
+  <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(5)" id="anchorOthers">
     <h3>Autres projets</h3>
   </div>
   <div class="col-md-12">
     <div class="row justify-content-around">
-      <div class="bubble bubbleLeft col-md-5 col-sm-12 col-xs-12" data-aos="fade-right">
-        <h5>ISSTracker</h5>
+      <div class="bubble bubbleLeft col-md-5 col-xs-8" data-aos="zoom-in">
+        <h4>ISSTracker</h4>
         <ngb-carousel
         [showNavigationArrows]="true"
         [showNavigationIndicators]="true"
@@ -211,35 +244,31 @@
         </ngb-carousel>
         <p>Grâce à cette application Android, vous pouvez suivre en temps réel sur une carte la trajectoire de la Station Spatiale Internationale. Vous pouvez également obtenir diverses informations sur les astronautes à bord ou bien obtenir un rappel pour sortir observer la station lorsqu'elle passe au dessus de votre tête.</p>
       </div>
-      <div class="bubble bubbleRight col-md-5 col-sm-12 col-xs-12" data-aos="fade-left">
-        <h5>Synthèse d'images</h5>
+      <div class="bubble bubbleRight col-md-5 col-xs-8" data-aos="zoom-in">
+        <h4>Synthèse d'images</h4>
         <img class="imgDemo" src="assets/img/SImage/ray-tracing_spheres.bmp" alt="Image réalisé à l'aide du lancer de rayon"/>
         <p>Image réalisée grâce à un programme de "RayTracing" en C++</p>
       </div>
     </div>
   </div>
-
-  <hr>
-
-  <div class="" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(5)" id="anchorAbout">
-    <h3>À propos</h3>
-    <div>
-      <div id="profilePictureDiv">
-        <img id="profilePicture" src="assets/img/profile_pictures/profile_picture_1.jpeg" alt="Profile Picture">
-      </div>
-      <div id="profileDesc">
-        <p>Une description originale et amusante. (pas pour l'instant du coup)</p>
-      </div>
-    </div>
-  </div>
-
 </div>
 
 <div class="footer col-12">
-  <p> Ceci sera le footer !</p>
-  <div class="custom-control custom-switch">
+  <ul class="footerInfosList footerContent">
+    <li><a class="specialLink" href="https://www.linkedin.com/in/gregwss/"><img src="assets/img/Logos/linkedin_logo.png" width="25px"> LinkedIn</a></li>
+    <li><a class="specialLink" href="https://github.com/GregWss"><img src="assets/img/Logos/GitHub_logo.png" width="25px"> Github</a></li>
+    <li><img src="assets/img/icons/mail_icon.png" width="25px"> weiss.gregory48@gmail.com</li>
+  </ul>
+
+  <ul class="footerCopyrightsList footerContent">
+    <li><a href="https://michalsnik.github.io/aos/">Animations</a></li>
+    <li><a href="https://www.dafont.com/minecrafter.font">Icon Font</a></li>
+  </ul>
+
+  <div class="custom-control custom-switch" style="visibility: hidden">
+    <p>FR</p>
     <input type="checkbox" class="custom-control-input" id="customSwitch1">
-    <label class="custom-control-label" for="customSwitch1" style="color: white">Toggle this switch element</label>
+    <label class="custom-control-label" for="customSwitch1" style="color: white">EN</label>
   </div>
 </div>
 

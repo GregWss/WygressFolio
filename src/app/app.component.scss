@@ -1,8 +1,12 @@
 /* VARIABLES */
 $primary-color: #263238;
 $primary-color-light: #4f5b62;
+$primary-color-dark: #000a12;
 $accent-color: #ffca28;
 $accent-color-light: #fffd61;
+$selection-color: rgba(255, 253, 97, 0.99);
+$selection-color-img: rgba(255, 253, 97, 0.6);
+
 /* All animations are made thanks to aos : https://michalsnik.github.io/aos/ */
 
 /* Title & header style */
@@ -12,7 +16,8 @@ $accent-color-light: #fffd61;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
-  margin-top: 5px;
+  padding-top: 25px;
+  padding-bottom: 50px;
 }
 
 #headerList {
@@ -27,21 +32,131 @@ $accent-color-light: #fffd61;
   padding: 25px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
   #headerList {
     display: none;
   }
 
   .titleIcon {
-    padding-bottom: 20px;
+    padding-bottom: 25px;
+  }
+}
+
+/* Author pres */
+#topDiv {
+  background-image:url("../assets/img/backgrounds/headerBackground_wide.png");
+  background-attachment: fixed;
+  background-repeat: repeat;
+  height: 100vh;
+}
+
+#gradientBuffer {
+  background-image: linear-gradient(0deg, rgba(38,50,56,1) 0%, rgba(38,50,56,0) 100%);
+  height: 25px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.aboutSection {
+  width: 100%;
+  margin-bottom: 50px;
+  padding-left: 100px;
+}
+
+#profilePictureDiv {
+  margin-top: 40px;
+  width: 150px;
+  float: left;
+}
+
+#profilePicture {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+#profileDesc {
+  padding-right: 70px;
+  margin-left: 50px;
+  width: 70vw;
+  float: left;
+}
+
+#profileDesc h1 {
+  color: black;
+  font-size: 100px;
+  font-family: 'Fugaz One', cursive;
+  text-shadow: 2px 4px 0 white;
+}
+
+#profileDesc p {
+  color: white;
+  background-color: black;
+  text-align: center;
+  text-indent: 50px;
+  font-size: 20px;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+@media only screen and (max-width: 1100px) {
+  #profilePictureDiv{
+    margin-top: 0px;
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .aboutSection {
+    padding-left: 0px;
+  }
+
+  #profileDesc {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-right: 20px;
+    float: none;
+  }
+
+  #profileDesc h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #profileDesc p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #profilePictureDiv{
+    width: 100px;
+  }
+}
+
+.nextImg {
+  max-width: 100%;
+  width: 5%;
+  display: block;
+  padding-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+@media only screen and (max-width: 1100px) {
+  .nextImg {
+    visibility: hidden;
   }
 }
 
 /* Content */
 .content {
   margin-top: 50px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -49,6 +164,44 @@ $accent-color-light: #fffd61;
     margin-top: 50px;
     padding-left: 10px;
     padding-right: 50px;
+  }
+}
+
+/* Skills pres */
+.skillsDiv {
+  padding: 5px;
+  margin-bottom: 25px;
+  background-color: $primary-color-light;
+  border-radius: 5px;
+}
+
+.logos {
+  width: 5%;
+}
+
+#c_plus_logo {
+  width: 4.5% !important;
+}
+
+#java_logo {
+  width: 6% !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .disapearWhenSmall {
+    display: none;
+  }
+
+  .logos {
+    width: 10%;
+  }
+
+  #c_plus_logo {
+    width: 9% !important;
+  }
+
+  #java_logo {
+    width: 11% !important;
   }
 }
 
@@ -61,8 +214,6 @@ $accent-color-light: #fffd61;
 .hellblazeVideo {
   padding: 50px;
   text-align: center;
-  background-image: url("../assets/img/Hellblaze/hellblaze_background.png");
-  background-attachment: fixed;
 }
 
 .videoPlayer {
@@ -88,18 +239,33 @@ $accent-color-light: #fffd61;
   }
 }
 
-/* Author pres */
-#profilePicture {
-  max-width: 100%;
-  border-radius: 50%;
+/* Footer style */
+.footer {
+  margin-top: 50px;
+  background-color: $primary-color-dark;
+  height: 200px;
 }
 
-#profilePictureDiv {
-  width: 100px;
+.footerContent {
+  margin-left: 50px;
+}
+
+.footerInfosList {
+  padding-top: 25px;
+  list-style: none;
   float: left;
 }
 
-#profileDesc {
-  margin-left: 15%;
-  height: 100px;
+.footerInfosList li {
+  margin-top: 5px;
+}
+
+.footerCopyrightsList {
+  padding-top: 25px;
+  list-style: none;
+  float: left;
+}
+
+.footerCopyrightsList li {
+  margin-top: 5px;
 }
