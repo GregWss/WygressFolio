@@ -53,6 +53,8 @@ label::selection {
 /* Emphasise some elements */
 .emphasise {
   color: $accent-color;
+  text-indent: 0px !important;
+  text-align: center;
 }
 
 .emphasise::selection {

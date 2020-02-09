@@ -14,7 +14,7 @@
   </div>
 
   <!-- Liste de navigation en points -->
-  <div data-aos="zoom-in" class="dotstyle dotstyle-smalldotstroke">
+  <!-- <div data-aos="zoom-in" class="dotstyle dotstyle-smalldotstroke">
   	<ul>
   		<li (click)="isCurrent(1)" [ngClass]="{'current': selectedDot === 1}"><a href="#anchorTop">Top</a></li>
   		<li (click)="isCurrent(2)" [ngClass]="{'current': selectedDot === 2}"><a href="#anchorSkills">Hellblaze</a></li>
@@ -22,7 +22,7 @@
   		<li (click)="isCurrent(4)" [ngClass]="{'current': selectedDot === 4}"><a href="#anchor2DFight">2DFight</a></li>
   		<li (click)="isCurrent(5)" [ngClass]="{'current': selectedDot === 5}"><a href="#anchorOthers">Others Projects</a></li>
   	</ul>
-  </div>
+  </div> -->
 
   <!-- Content -->
   <div class="aboutSection">
@@ -33,7 +33,10 @@
       <h1>BONJOUR !</h1>
       <p>Je suis développeur ! Des sites web aux jeux vidéo en passant par les logiciels et les applications mobiles, mes expérimentations sont sans limite !</p>
     </div>
-    <img class="nextImg" src="assets/img/icons/Arrow-down_black.png" data-aos="fade-up">
+  </div>
+
+  <div class="nextImg">
+    <img src="assets/img/icons/Arrow-down_black.png" data-aos="fade-up">
   </div>
 
   <div id="gradientBuffer">
@@ -43,7 +46,8 @@
 <div class="content" data-aos="zoom-in">
   <div inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="isCurrent(2)" id="anchorSkills" class="skillsDiv">
     <h3>Skills</h3>
-    <p><span class="emphasise disapearWhenSmall">Je parle couramment le : </span>
+    <p class="emphasise disapearWhenSmall">Je parle couramment le :</p>
+    <div class="logosWrapper">
       <img class="logos" src="assets/img/Logos/C_Sharp_logo.png" alt="C Sharp">
       <img class="logos" id="c_plus_logo" src="assets/img/Logos/C++_logo.png" alt="C ++">
       <img class="logos" src="assets/img/Logos/HTML5_logo.png" alt="HTML">
@@ -51,16 +55,18 @@
       <img class="logos" src="assets/img/Logos/JavaScript_logo.png" alt="JavaScript">
       <img class="logos" src="assets/img/Logos/Python_logo.png" alt="Python">
       <img class="logos" id="java_logo" src="assets/img/Logos/java_logo.png" alt="Java">
-    </p>
-    <p><span class="emphasise disapearWhenSmall">J'utilise ces outils : </span>
+    </div>
+
+    <p class="emphasise disapearWhenSmall">J'utilise ces outils :</p>
+    <div class="logosWrapper">
       <img class="logos" src="assets/img/Logos/Unity_logo.png" alt="Unity">
       <img class="logos" src="assets/img/Logos/Unreal_Engine_logo.png" alt="Unreal Engine">
       <img class="logos" src="assets/img/Logos/Visual_Studio_logo.png" alt="Visual Studio">
       <img class="logos" src="assets/img/Logos/Angular_logo.png" alt="Angular">
       <img class="logos" src="assets/img/Logos/Android_Studio_logo.png" alt="Android Studio">
       <img class="logos" src="assets/img/Logos/atom_logo.png" alt="Atom">
-    </p>
     </div>
+  </div>
 
 
   <div data-aos="fade-right">
