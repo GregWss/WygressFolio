@@ -1,5 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# Things you can download
+src/assets/downloads
+
 # compiled output
 /dist
 /tmp

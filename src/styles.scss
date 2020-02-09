@@ -1,38 +1,308 @@
-/* You can add global styles to this file, and also import other style files */
+/* VARIABLES */
+$primary-color: #263238;
+$primary-color-light: #4f5b62;
+$primary-color-dark: #000a12;
+$accent-color: #ffca28;
+$accent-color-light: #fffd61;
+$selection-color: rgba(255, 253, 97, 0.99);
+$selection-color-img: rgba(255, 253, 97, 0.6);
+
+/* REUSABLE AND GLOBAL STYLES */
+
 body {
-  background-color: #263238;
+  background-color: $primary-color;
 }
 
-h1, h2, h3, h4, p {
+/* Text style */
+h1, h2, h3, h4, h5, p, li {
   color: white;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, p::selection, li::selection {
+  color: black;
+  background: $selection-color;
+}
+
+p {
+  text-indent: 25px;
+  text-align: justify;
+}
+
+h3 {
+  font-size: 40px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+img::selection {
+  background: $selection-color-img;
+}
+
+label::selection {
+  color: black;
+  background: $selection-color;
+}
+
+/* Content sections and subsections styles */
+/* Emphasise some elements */
+.emphasise {
+  color: $accent-color;
+}
+
+.emphasise::selection {
+  color: black;
+  background: $selection-color;
+}
+
+/* Responsive images */
+.imgDemo {
+  max-width: 100%;
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.logos {
+  padding: 5px;
+}
+
+/* Line separator */
+hr {
+  width: 60%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: dotted;
+  border-width: 5px 0px 0px 0px;
+  border-color: $accent-color-light;
+}
+
+@media only screen and (max-width: 768px) {
+  hr {
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
 }
 
 /* Buttons styles and effects */
-button {
-  background-color: #ffca28 !important;
+.btn {
+  background-color: $accent-color !important;
   color: black;
   //box-shadow: 0 5px #4f5b62;
 }
 
-button:hover {
-  background-color: #fffd61 !important;
+.btn:hover {
+  background-color: $accent-color-light !important;
 }
 
-button:active {
-  background-color: #fffd61;
+.btn:active {
+  background-color: $accent-color-light;
   transform: translateY(4px);
+}
+
+/* Custom switch changes */
+.custom-control-label:before{
+    background-color: white;
+}
+.custom-control-input:checked~.custom-control-label::before{
+    background-color: $accent-color;
+}
+
+.custom-control-input:active~.custom-control-label::before{
+    background-color: $accent-color-light !important;
 }
 
 /* Links styles and effects */
 a {
-  color: #ffca28;
+  color: $accent-color;
 }
 
 a:visited {
-  color: #ffca28;
+  color: $accent-color;
 }
 
 a:hover {
-  color: #fffd61;
+  color: $accent-color-light;
   text-decoration: none;
+}
+
+a::selection {
+  color: black;
+  background: $selection-color;
+}
+
+.specialLink {
+  color: white !important;
+}
+
+.specialLink:hover {
+  color: white !important;
+}
+
+/* Carousel style */
+ngb-carousel {
+    max-width: 75%;
+    margin: 50px auto;
+}
+
+ngb-carousel img {
+    width: 100%;
+    outline: none;
+}
+
+.carousel-inner {
+    overflow: visible;
+}
+
+.carousel-item {
+    display: flex !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s;
+    z-index: -1;
+}
+
+.carousel-item.active{
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.carousel-control-prev {
+     z-index: 20;
+}
+
+
+.carousel-control-next {
+     z-index: 20;
+}
+
+.carousel-indicators{
+    z-index: 20;
+}
+
+/* Project ressources style */
+.projectLinks {
+  border: 1px solid $accent-color;
+  border-radius: 10px;
+  height: 50px;
+}
+
+.dlButton {
+  float: left;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.otherProjectLinks {
+  padding-top: 7px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+  .projectLinks {
+    height: auto;
+  }
+
+  .dlButton {
+    float: none;
+    overflow: auto;
+    text-align: center;
+  }
+
+  .otherProjectLinks {
+    overflow: auto;
+  }
+
+  .otherProjectLinks p {
+    text-indent: none;
+    text-align: center;
+  }
+}
+
+/* Dot navigation */
+.dotstyle {
+  position: fixed;
+  right: 5px;    // 5px relative to the most-right of parent
+  margin-top: 50px;
+  z-index: 100;
+}
+
+.dotstyle ul {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	cursor: default;
+}
+
+.dotstyle li {
+	position: relative;
+	display: block;
+	margin: 0 16px;
+  margin-top: 10px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.dotstyle li a {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border-radius: 50%;
+	background-color: #fff;
+	background-color: rgba(255,255,255,0.3);
+	text-indent: -999em;
+	cursor: pointer; /* make the text accessible to screen readers */
+	position: absolute;
+}
+
+/* Small dot with stroke */
+.dotstyle-smalldotstroke li {
+	border-radius: 50%;
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+	-webkit-transition: box-shadow 0.3s ease;
+	-moz-transition: box-shadow 0.3s ease;
+	-o-transition: box-shadow 0.3s ease;
+	transition: box-shadow 0.3s ease;
+}
+
+.dotstyle-smalldotstroke li a {
+	background-color: rgba(255, 255, 255, 0.7);
+	-webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+	-moz-transition: background-color 0.3s ease, -moz-transform 0.3s ease;
+	-o-transition: background-color 0.3s ease, -o-transform 0.3s ease;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dotstyle-smalldotstroke li a:hover,
+.dotstyle-smalldotstroke li a:focus,
+.dotstyle-smalldotstroke li.current a {
+	background-color: white;
+}
+
+.dotstyle-smalldotstroke li.current a {
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	-o-transform: scale(0.4);
+	transform: scale(0.4);
+}
+
+.dotstyle-smalldotstroke li.current {
+	box-shadow: 0 0 0 2px white;
 }
