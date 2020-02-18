@@ -133,6 +133,10 @@ $selection-color-img: rgba(255, 253, 97, 0.6);
 }
 
 @media only screen and (max-width: 768px) {
+  #gradientBuffer {
+    visibility: hidden;
+  }
+  
   #profilePictureDiv{
     width: 100px;
   }
